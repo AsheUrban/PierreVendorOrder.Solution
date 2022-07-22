@@ -14,7 +14,7 @@ namespace PierreVendorOrder.Controllers
     }
 
     [HttpGet("/orders/new")]
-    public ActionResult CreateForm()
+    public ActionResult New()
     {
       return View();
     }
@@ -31,6 +31,13 @@ namespace PierreVendorOrder.Controllers
     {
       Order.ClearAll();
       return View();
+    }
+
+    [HttpGet("/orders/{id}")]
+    public ActionResult Show(int id)
+    {
+      Order foundOrder = Order.Find(id);
+      return View(foundOrder);
     }
   }
 }
