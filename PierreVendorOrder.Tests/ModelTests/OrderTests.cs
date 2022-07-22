@@ -52,8 +52,8 @@ namespace PierreVendorOrder.Tests
     [TestMethod]
     public void GetAll_ReturnsOrders_OrderList()
     {
-      string description01 = "4 bags of flour.";
-      string description02 = "6 bags of flour & 2 loaves of bread.";
+      string description01 = "4 loaves of bread.";
+      string description02 = "2 loaves of bread.";
       Order newOrder1 = new Order(description01);
       Order newOrder2 = new Order(description02);
       List<Order> newList = new List<Order> { newOrder1, newOrder2 };
@@ -64,7 +64,7 @@ namespace PierreVendorOrder.Tests
     [TestMethod]
     public void GetId_OrdersInstantiateWithAnIdAndGetterReturns_Int()
     {
-      string description = "4 bags of flour.";
+      string description = "4 loaves of bread.";
       Order newOrder = new Order(description);
       int result = newOrder.Id;
       Assert.AreEqual(1, result);
@@ -73,8 +73,8 @@ namespace PierreVendorOrder.Tests
     [TestMethod]
     public void Find_ReturnsCorrectOrders_Order()
     {
-      string description01 = "4 bags of flour.";
-      string description02 = "6 bags of flour & 2 loaves of bread.";
+      string description01 = "4 loaves of bread.";
+      string description02 = "2 loaves of bread..";
       Order newOrder1 = new Order(description01);
       Order newOrder2 = new Order(description02);
       Order result = Order.Find(2);
