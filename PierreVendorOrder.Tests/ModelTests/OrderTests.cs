@@ -61,6 +61,15 @@ namespace PierreVendorOrder.Tests
       CollectionAssert.AreEqual(newList, result);
     }
 
+    [TestMethod]
+    public void GetId_OrdersInstantiateWithAnIdAndGetterReturns_Int()
+    {
+      string description = "4 bags of flour.";
+      Order newOrder = new Order(description);
+      int result = newOrder.Id;
+      Assert.AreEqual(1, result);
+    }
+
 
 
     
