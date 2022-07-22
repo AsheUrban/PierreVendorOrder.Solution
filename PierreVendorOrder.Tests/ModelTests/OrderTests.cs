@@ -23,6 +23,19 @@ namespace PierreVendorOrder.Tests
       Assert.AreEqual(description, result);
     }
 
+    [TestMethod]
+    public void SetDescription_SetDescription_String()
+    {
+      string description = "4 bags of flour.";
+      Order newOrder = new Order(description);
+      string updatedDescription = "6 bags of flour & 2 loaves of bread.";
+      newOrder.Description = updatedDescription;
+      string result = newOrder.Description;
+      Assert.AreEqual(updatedDescription, result);
+    }
+
+
+
     
 
   }
