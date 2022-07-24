@@ -68,9 +68,5 @@ namespace PierreVendorOrder.Tests
       List<Order> result = newVendor.Orders;
       CollectionAssert.AreEqual(newList, result);
     }
-
-
-
-
   }
 }
