@@ -39,7 +39,7 @@ Pierre should be provided with a link to a page presenting him with a form to cr
 
 ## Known Bugs
 
-* _Clear All not working_
+* _None_
 
 
 ## License
