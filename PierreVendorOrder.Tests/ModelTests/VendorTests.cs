@@ -58,7 +58,9 @@ namespace PierreVendorOrder.Tests
     public void AddOrder_AssociatesOrderWithVendor_OrderList()
     {
       string description = "4 loaves of bread.";
-      Order newOrder = new Order(description);
+      string price = "test";
+      string date = "test";
+      Order newOrder = new Order(description, price, date);
       List<Order> newList = new List<Order> { newOrder };
       string name = "Extracto";
       Vendor newVendor = new Vendor(name);
